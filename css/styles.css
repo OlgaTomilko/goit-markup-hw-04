@@ -98,7 +98,14 @@ img {
   display: flex;
 }
 .header .header-mail-link {
+  display: flex;
+  align-items: center;
   margin-right: 50px;
+}
+
+.header .header-tel-link {
+  display: flex;
+  align-items: center;
 }
 
 .logo-first-word,
@@ -123,14 +130,14 @@ img {
   padding-bottom: 32px;
 }
 
-.envelope-icon {
+.address-icons {
   fill: currentColor;
   margin-right: 10px;
 }
 
-.envelope-icon:hover,
-.envelope-icon:focus {
-  fill: var(--accent-color);
+.address-container {
+  display: flex;
+  align-content: center;
 }
 
 .navigation-list-item::after {
@@ -259,6 +266,8 @@ img {
   background: #f5f4fa;
   padding: 25px 100px;
   border-radius: 4px;
+  height: 120px;
+  width: 270px;
 }
 
 /* .about-us-list-item::before {
@@ -400,10 +409,18 @@ img {
 .command-social-links-item:not(:last-child) {
   margin-right: 10px;
 }
+.command-social-icon {
+  fill: #afb1b8;
+  width: 20px;
+  height: 20px;
+}
 
 .command-social-links-item:hover,
 .command-social-links-item:focus {
   background: var(--accent-color);
+}
+.command-social-links-item:hover .command-social-icon {
+  fill: #fff;
 }
 
 .team-list .social-links {
@@ -429,31 +446,6 @@ img {
   letter-spacing: 0.03em;
 }
 
-.command-social-icon {
-  fill: #afb1b8;
-  width: 20px;
-  height: 20px;
-}
-
-.command-social-icon:hover,
-.command-social-icon:focus {
-  fill: #fff;
-}
-
-.social-command-links-background {
-  /* display: inline-block;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-size: 20px;
-  padding: 12px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: rgba(255, 255, 255, 0.1); */
-  /* background-color: red;
-  display: block; */
-}
-
 /* НАШИ КЛИЕНТЫ */
 
 .clients-title {
@@ -472,11 +464,13 @@ img {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  color: #afb1b8;
 }
 
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .clients-list-items:not(:last-child) {
@@ -484,12 +478,12 @@ img {
 }
 
 .clients-icon {
-  fill: #afb1b8;
+  fill: currentColor;
 }
 
 .clients-icon:hover,
 .clients-icon:focus {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 
 /* ПОДВАЛ */
